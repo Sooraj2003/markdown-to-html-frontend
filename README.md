@@ -1,12 +1,94 @@
-# React + Vite
+# 📝 Markdown to HTML Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application that allows users to type Markdown and instantly see the rendered HTML on the right-hand side. It connects to a backend Express server that uses the `showdown` library to convert Markdown into HTML.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Live Markdown editing with instant preview
+- Clean side-by-side layout (Markdown input & HTML output)
+- Uses Tailwind CSS for styling
+- Communicates with Express backend via `axios` (sends `text/plain`)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React, Tailwind CSS, Axios
+- **Markdown Conversion:** Handled by a backend Express server using Showdown
+
+---
+
+## 📦 Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/markdown-to-html-frontend.git
+cd markdown-to-html-frontend
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Ensure Backend is Running
+
+Start your backend Express server on port `5000`:
+
+```bash
+node app.js
+```
+
+This should expose a POST endpoint at `http://localhost:5000/markdown` that receives `text/plain` and returns converted HTML.
+The backend is available in my repo markdown-to-html-backend.
+
+### 4. Start Frontend
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:5173` (or whatever port Vite/React runs on).
+
+---
+
+## 📁 Folder Structure
+
+```
+markdown-to-html-frontend/
+├── src/
+│   ├── components/
+│   │   ├── MarkDownInput.jsx
+│   │   └── Preview.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── tailwind.config.js
+└── index.html
+```
+
+
+
+
+
+## 🔮 Future Ideas
+
+- Add GitHub Flavored Markdown (GFM) support
+- Export preview to HTML
+- Mobile view support
+- Theme toggler (light/dark mode)
+
+---
+
+## 🧑‍💻 Author
+
+Made with ❤️ by **Sooraj**
+
+---
+
+## 📄 License
+
+MIT License
